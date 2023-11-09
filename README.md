@@ -1,7 +1,7 @@
 # PainelSuporte
 Projeto HTML desenvolvido para automação de coleta de dados em CRM a base de Web-Scraping. O RPA utilizado foi UI.VISION sendo assim, é necessário obter aplicação instalada e scripts (MACRO) devidamente exportados e contidos no mesmo diretório do HTML. 
 
-- Programa desenvolvido para fins de aprendizado e de utilidade interna da equipe.
+- 👉Programa desenvolvido para fins de aprendizado e de utilidade interna da equipe.
 
 - OBS, no modelo original os botões "buscar" contém chamada href para pagina do google, os mesmos devem ser substituidos pelo link de chamada do MACRO exportada da aplicação UI.VISION
 
@@ -19,3 +19,15 @@ id=“run” href=“ui.vision.html?direct=1&savelog=log.txt&macro=Demo/Core/Dem
 
 <img src="https://forum.ui.vision/uploads/db8324/original/2X/f/fc0946ea644075f16a2e82eaf692c0a031bc6921.png" />
 
+
+
+👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇
+
+
+
+<img src="https://imgur.com/cpRQCks.png"/>
+
+
+<img src="https://imgur.com/PPm9ikO.png"/>
+
+<img src="https://imgur.com/50CHuTJ.png"/>
