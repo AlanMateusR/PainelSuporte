@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<meta name="keywords" content="Simple, Transparent Pricing, It&amp;apos;s Free!">
+<meta name="description" content="">
+<title>LOADING</title>
+<link rel="stylesheet" href="nicepage.css" media="screen">
+<link rel="stylesheet" href="painel.css" media="screen">
+<script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
+<script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
+<meta name="generator" content="Nicepage 4.18.7, nicepage.com">
+<link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+<link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i|Aclonica:400">
+
+
+
+<script type="application/ld+json">{
+"@context": "http://schema.org",
+"@type": "Organization",
+"name": ""
+}</script>
+<meta name="theme-color" content="#201e9c">
+<meta property="og:title" content="painel">
+<meta property="og:type" content="website">
+</head>
+<body data-home-page="https://website2888663.nicepage.io/painel.html?version=c3c86fd0-1949-4648-97db-8296ce59c6f8" data-home-page-title="painel" class="u-body u-xl-mode" data-lang="pt">
+<section class="u-carousel u-slide u-block-e813-1" id="carousel_f5a4" data-image-width="1920" data-image-height="1080" data-interval="5000" data-u-ride="carousel">
+  <ol class="u-carousel-indicators u-block-e813-6">
+    <li data-u-target="#carousel_f5a4" data-u-slide-to="0" class="u-active u-grey-30"></li>
+  </ol>
+  <div class="u-carousel-inner" role="listbox">
+    <div class="u-active u-carousel-item u-clearfix u-image u-section-1-1" data-image-width="1920" data-image-height="1080">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <img class="u-image u-image-default u-preserve-proportions u-image-1" src="images/logotransp.png" alt="" data-image-width="220" data-image-height="131">
+        <h1 class="u-custom-font u-font-ubuntu u-text u-text-default u-text-palette-4-light-2 u-text-1">Script is Running&nbsp;<br>&nbsp; &nbsp; please wait...
+        </h1>
+      </div>
+    </div>
+  </div>
+</section>
+
+</head>
+<body>
+
+<script>
+(function() {
+  var isExtensionLoaded = function () {
+    const $root = document.documentElement
+    return !!$root && !!$root.getAttribute('data-kantu')
+  }
+  var increaseCountInUrl = function (max) {
+    var url   = new URL(window.location.href)
+    var count = 1 + (parseInt(url.searchParams.get('reload') || 0))
+
+    url.searchParams.set('reload', count)
+    var nextUrl = url.toString()
+
+    var shouldStop = count > max
+    return [shouldStop, !shouldStop ? nextUrl : null]
+  }
+  var run = function () {
+    try {
+      var evt = new CustomEvent('kantuSaveAndRunMacro', {
+        detail: {
+          html: document.documentElement.outerHTML,
+          noImport: true,
+          storageMode: 'browser'
+        }
+      })
+
+      window.dispatchEvent(evt)
+      var intervalTimer = setInterval(() => window.dispatchEvent(evt), 1000);
+
+      if (window.location.protocol === 'file:') {
+        var onInvokeSuccess = function () {
+          clearTimeout(timer)
+          clearTimeout(reloadTimer)
+          clearInterval(intervalTimer)
+          window.removeEventListener('kantuInvokeSuccess', onInvokeSuccess)
+        }
+        var timer = setTimeout(function () {
+          alert('Error #203: It seems you need to turn on *Allow access to file URLs* for Kantu in your browser extension settings.')
+        }, 8000)
+
+        window.addEventListener('kantuInvokeSuccess', onInvokeSuccess)
+      }
+    } catch (e) {
+      alert('Kantu Bookmarklet error: ' + e.toString());
+    }
+  }
+  var reloadTimer = null
+  var main = function () {
+    if (isExtensionLoaded())  return run()
+
+    var MAX_TRY   = 3
+    var INTERVAL  = 1000
+    var tuple     = increaseCountInUrl(MAX_TRY)
+
+    if (tuple[0]) {
+      return alert('Error #204: It seems UI.Vision RPA is not installed yet - or you need to turn on *Allow access to file URLs* for UI.Vision RPA in your browser extension settings.')
+    } else {
+      reloadTimer = setTimeout(function () {
+        window.location.href = tuple[1]
+      }, INTERVAL)
+    }
+  }
+
+  setTimeout(main, 500)
+})();
+</script>
+</body>
+</html>
+  

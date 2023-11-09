@@ -1,0 +1,126 @@
+{
+  "Name": "cons.ch1",
+  "CreationDate": "2022-9-21",
+  "Commands": [
+    {
+      "Command": "comment",
+      "Target": "open // file:///home/suporte/%C3%81rea%20de%20Trabalho/SCRIPTS/HTML%202/PAGE%206/index.html#carousel_f5a4",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "selectWindow",
+      "Target": "title=PAINEL SUPORTE V6",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "storeValue",
+      "Target": "xpath=//section[2]/div/div/div/div/div/div[2]/form/div/input",
+      "Value": "cnpj",
+      "Description": "consultar chamados"
+    },
+    {
+      "Command": "selectWindow",
+      "Target": "title=Chamados",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "if_v2",
+      "Target": "${!statusOK} ",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "assertTitle",
+      "Target": "Chamados",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "elseif",
+      "Target": "",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "selectWindow",
+      "Target": "tab=1",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "open",
+      "Target": "https://tefway.app.gluocrm.com.br/index.php?module=HelpDesk&parent=&page=1&view=List&viewname=80&orderby=&sortorder=&app=SUPPORT&search_params=%5B%5D&tag_params=%5B%5D&nolistcache=0&list_headers=%5B%22ticketstatus%22%2C%22ticket_title%22%2C%22cf_1073%22%2C%22parent_id%22%2C%22(parent_id+%3B+(Accounts)+cpfcnpj)%22%2C%22rel_revenda%22%2C%22(parent_id+%3B+(Accounts)+rel_revenda)%22%2C%22assigned_user_id%22%2C%22cf_1047%22%2C%22product_id%22%2C%22cf_1787%22%2C%22createdtime%22%2C%22modifiedtime%22%2C%22ticket_no%22%5D&tag=",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "end",
+      "Target": "",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "type",
+      "Target": "name=(parent_id ; (Accounts) cpfcnpj)",
+      "Value": "${cnpj}",
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//*[@id=\"listViewContent\"]/div/div[3]/div[2]/table/thead/tr[2]/th/div/button/span",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "if_v2",
+      "Target": "${!statusOK} ",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "verifyElementPresent",
+      "Target": "linkText=Sitef Local Monoloja",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "echo",
+      "Target": "CLIENTE É LOCAL",
+      "Value": "green",
+      "Description": ""
+    },
+    {
+      "Command": "end",
+      "Target": "",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "if_v2",
+      "Target": "${!statusOK} == false",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "verifyElementPresent",
+      "Target": "linkText=Sitef Nuvem",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "echo",
+      "Target": "CLIENTE É NUVEM",
+      "Value": "orange",
+      "Description": ""
+    },
+    {
+      "Command": "end",
+      "Target": "",
+      "Value": "",
+      "Description": ""
+    }
+  ]
+}
