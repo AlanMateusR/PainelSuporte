@@ -3,7 +3,7 @@ Projeto HTML desenvolvido para automação de coleta de dados em CRM a base de W
 
 - Programa desenvolvido para fins de aprendizado e de utilidade interna da equipe.
 
-- OBS, no modelo original os botões "buscar" contém chamada href para pagina do google, os mesmos devse ser substtuidos pelo link de chamada do MACRO exportada da aplicação UI.VISION
+- OBS, no modelo original os botões "buscar" contém chamada href para pagina do google, os mesmos devem ser substituidos pelo link de chamada do MACRO exportada da aplicação UI.VISION
 
 - Documento UI.Vision: https://ui.vision/rpa/docs
 
