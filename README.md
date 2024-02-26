@@ -31,3 +31,7 @@ id=“run” href=“ui.vision.html?direct=1&savelog=log.txt&macro=Demo/Core/Dem
 <img src="https://imgur.com/PPm9ikO.png"/>
 
 <img src="https://imgur.com/50CHuTJ.png"/>
+
+> ~Alan Mateus Rodrigues
+> 
+> ~linkedin: https://www.linkedin.com/in/alan-rodrigues-983822218/
